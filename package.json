@@ -1,0 +1,16 @@
+{
+  "name": "type-view-def-builder",
+  "version": "1.0.0",
+  "scripts": {
+    "client": "cd client && yarn start",
+    "server": "cd api && java -jar target/spring-data-dynamodb-0.0.1-SNAPSHOT.jar",
+    "dev": "concurrently --kill-others-on-fail \"yarn server\" \"yarn client\""
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0"
+  },
+  "dependencies": {
+    "draft-js": "^0.10.5",
+    "react-draft-wysiwyg": "^1.12.13"
+  }
+}

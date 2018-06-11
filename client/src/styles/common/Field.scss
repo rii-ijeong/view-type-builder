@@ -1,0 +1,94 @@
+@import './../mixins';
+
+.field {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 5px;
+  line-height: 24px;
+  width: 100%;
+  overflow: hidden;
+
+  i {
+    float: left;
+  }
+
+  span {
+    display: inline-block;
+    width: calc(100% - 26px);
+    height: 24px; 
+    float: left;
+    padding-left: 5px;
+    @include overflow-ellipsis();
+  }
+
+  &.edit-field {
+    cursor: pointer;
+    &:hover {
+      background: darken(#fff, 5%);
+    }
+    &:active {
+      background: darken(#fff, 10%);
+    }
+  }
+}
+
+.input-field {
+  overflow: hidden; 
+  margin-bottom: 20px;
+  font-family: 'ClearSans';
+  width: 100%;
+  clear: both;
+
+  &.half {
+    width: 50%;
+    float: left;
+    padding: 0 10px;
+    clear: none;
+  }
+
+  &:not(.input-checkbox){
+    label {
+      width: 100%;
+      float: left;
+    }
+
+    input, textarea, select {
+      float: left;
+      width: 100%;
+    }
+  }
+
+  &.input-checkbox {
+    width: auto;
+    float: left;
+    clear: none;
+    margin-right: 30px;
+    input {
+      margin-right: 10px;
+    }
+  }
+
+  &.include-btn {
+    position: relative; 
+
+    input, textarea {
+      width: calc(100% - 50px);
+    }
+
+    button {
+      position: absolute;
+      top: 25px;
+      right: 0;
+      width: 50px;
+      height: 26px;
+      border-radius: 0;
+
+      i {
+        position: relative;
+        top: -5px;
+        left: -2px;
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+@import './../variables';
+
+.view-page {
+  display: none;
+  padding: 15px;
+
+  &.visible {
+    display: block;
+  }
+
+  .layout-actions {
+    margin-bottom: 20px;
+
+    .add-row {
+      background: $main;
+      border: 1px solid darken($main, 10%);
+      font-size: 12px;
+
+      span {
+        line-height: 18px;
+      }
+
+      i {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .rows {
+    .sortable-row-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+  }
+}

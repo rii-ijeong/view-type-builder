@@ -1,0 +1,85 @@
+@import './../variables';
+@import './../mixins';
+
+.view-column {
+
+  .view-column-container{
+    @include full-width();
+    padding-right: 5px;
+  }
+
+  .column-header {
+    background: lighten($main, 20%);
+    position: relative;
+    padding: 5px 10px 3px 22px;
+    line-height: 22px;
+    cursor: move;
+    font-size: 12px;
+    border: 1px solid $main;
+
+    i {
+      position: absolute;
+      top: 7px;
+      left: 4px;
+      font-size: 18px;
+    }
+  }
+
+  .toggle-visibility-icon {
+    right: 55px;
+  }
+
+  .delete-row-icon {
+    top: 2px;
+    right: 20px;
+  }
+
+  .contents-container {
+    overflow: hidden;
+    max-height: 0;
+
+    &.visible {
+      max-height: 2000px;
+    }
+  }
+
+  .contents {
+    border:1px solid #ccc;
+    padding: 15px;
+
+    @include full-width();
+  }
+
+  h4{
+    font-family: 'ClearSans';
+    font-size: 15px;
+    background: lighten($main, 15%);
+    @include full-width();
+    margin: 0;
+    padding: 4px 10px;
+  }
+
+  .column-fields{
+    border: 1px solid $main;
+    width: 100%;
+    float: left;
+    clear: both;
+  }
+
+  .add-field {
+    @include full-width();
+
+    select {
+      float: left;
+      width: calc(100%);
+      border-radius: 0;
+      padding: 5px;
+      -webkit-appearance: none;
+      cursor: pointer;
+
+      &:hover {
+        background: darken(#fff, 10%);
+      }
+    }
+  }
+}

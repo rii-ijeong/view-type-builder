@@ -1,0 +1,220 @@
+@import './variables';
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+button, input, select { 
+  &:focus {
+    outline: none !important;
+  }
+}
+
+button { 
+  cursor: pointer;
+  font-family: 'ClearSans';
+  padding: 5px 15px;
+  border-radius: 4px;
+
+  &.main {
+    background: $main;
+    color: #fff;
+    border: 1px solid darken($main, 15%);
+    i {
+      color: #fff !important;
+    }
+
+    &:hover {
+      background: darken($main, 5%) !important;
+    }
+
+    &:active{
+      background: darken($main, 10%) !important;;
+    }
+  }
+
+  & + button {
+    margin-left: 10px;
+  }
+
+  &.text-and-icon {
+    i {
+      float: left;
+    }
+
+    span {
+      margin-left: 4px;
+      float: left;
+      line-height: 26px;
+      text-transform: uppercase;
+    }
+
+    &:hover {
+      background: darken(#fff, 5%);
+    }
+
+    &:active{
+      background: darken(#fff, 10%);
+    }
+  }
+}
+
+.success-message {
+  padding: 30px 10px 10px 10px;
+  border: 1px solid $success;
+  border-radius: 5px;
+  position: relative;
+  font-size: 12px;
+
+  &:before {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    content: 'Success:';
+    width: 100%;
+    height: 26px;
+    color: $success;
+    font-weight: bold;
+  }
+  margin-bottom: 10px;
+}
+
+.error-message {
+  padding: 30px 10px 10px 10px;
+  border: 1px solid $error;
+  border-radius: 5px;
+  position: relative;
+  font-size: 12px;
+
+  &:before {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    content: 'Error:';
+    width: 100%;
+    height: 26px;
+    color: $error;
+    font-weight: bold;
+  }
+  margin-bottom: 10px;
+}
+
+.list {
+  width: 100%;
+  border: 1px solid $main;
+  margin: 10px 0;
+  min-height: 36px;
+
+  .list-item {
+    width: 100%;
+    padding: 10px 5px;
+    border-bottom: 1px solid $main;
+    background-color: lighten($main, 24%);
+    font-size: 11px;
+
+    &:last-child {
+      border-bottom: 0;
+    }
+  }
+}
+
+.modal-header{
+  background: lighten($main, 12%);
+  border-bottom: 1px solid $main;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Cheque';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local('Cheque'),
+    local('Cheque'),
+    url('./../fonts/cheque/Cheque-Regular.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'TagType';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local('TagType'),
+    local('TagType'),
+    url('./../fonts/tagtype/tagtype-freefont.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'BigJohn';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local('BigJohn'),
+    local('BigJohn'),
+    url('./../fonts/bigjohn-slimjoe/BIG_JOHN.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'SlimJoe';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local('SlimJoe'),
+    local('SlimJoe'),
+    url('./../fonts/bigjohn-slimjoe/Slim_Joe.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'ClearSans';
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local('ClearSans'),
+    local('ClearSans-Regular'),
+    url('./../fonts/clearsans/ClearSans-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'ClearSans';
+  font-style: normal;
+  font-weight: 700;
+  src:
+    local('ClearSans Bold'),
+    local('ClearSans-Bold'),
+    url('./../fonts/clearsans/ClearSans-Bold.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'ClearSans';
+  font-style: normal;
+  font-weight: 300;
+  src:
+    local('ClearSans Light'),
+    local('ClearSans-Light'),
+    url('./../fonts/clearsans/ClearSans-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'ClearSans';
+  font-style: italic;
+  font-weight: 400;
+  src:
+    local('ClearSans Italic'),
+    local('ClearSans-Italic'),
+    url('./../fonts/clearsans/ClearSans-Italic.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'ClearSans';
+  font-style: italic;
+  font-weight: 700;
+  src:
+    local('ClearSans BoldItalic'),
+    local('ClearSans-BoldItalic'),
+    url('./../fonts/clearsans/ClearSans-BoldItalic.woff') format('woff');
+}
