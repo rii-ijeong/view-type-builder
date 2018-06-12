@@ -71,7 +71,7 @@ class ViewRenderer extends Component {
 
         <div className="view-renderer-container">
           { viewType === 'detail' ? <DetailView singlePage={isSinglePage} objectType={objectType} onUpdate={this.updateData} /> : null }
-          { viewType === 'summary' ? <SummaryView objectType={objectType} /> : null }
+          { viewType === 'summary' ? <SummaryView objectType={objectType} onUpdate={this.updateData} /> : null }
         </div>
       </div>
     );

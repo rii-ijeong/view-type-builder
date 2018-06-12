@@ -245,3 +245,150 @@
     background: $main !important;
   }
 }
+
+.sortable-type-field {
+  border: 1px solid #ccc;
+  background: #f2f2f2;
+  padding:6px 6px 6px 20px;
+  margin-right: 2px;
+  position: relative;
+  float: left;
+
+  i {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    font-size: 18px !important;
+    cursor: move;
+  }
+}
+
+.summary-view {
+  padding: 15px;
+
+  .input-field.half{
+    min-height: 1px;
+  }
+
+  .type-fields {
+    @include full-width();
+    
+    h3 {
+      font-size: 16px;
+    }
+  }
+
+  .sortable-summary-field-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .nav-action-list {
+    width: 100%;
+    min-height: 200px;
+    background: #f2f2f2;
+    border:1px solid darken(#fff, 15%);
+
+    &.drag-over {
+      background: lighten($main, 10%);
+      border:1px solid $main;
+
+      .nav-item {
+        border-bottom: 1px solid $main;
+      }
+    }
+  }
+
+  .navigation-action-selection {
+    float: left;
+    width: 100%;
+
+    label {
+      cursor: pointer;
+      position: relative;
+      padding-left: 25px;
+      .toggle-visibility-icon {
+        position: absolute;
+        top: -2px; 
+        left: 0;
+      }
+    }
+
+    .navigation-action-content {
+      max-height: 0;
+      overflow: hidden;
+      float: left;
+      width: auto;
+      clear: both;
+      border:1px solid #ddd;
+      padding: 5px;
+      border-radius: 4px;
+      @include transition(max-height 500ms);
+
+      &.visible { 
+        max-height: 2000px;
+      }
+    }
+
+    .actions, .more-actions {
+      float: left;
+      width: 250px;
+      margin-right: 20px;
+      h3 { 
+        font-size: 12px;
+        max-width: 250px;
+        margin-top:5px;
+      }
+    }
+  }
+
+  .nav-item {
+    position: relative;
+    padding: 5px 5px 5px 30px;
+    border-bottom: 1px solid darken(#fff, 15%);
+
+    &.dragging {
+      border: 1px solid $main;
+      background: lighten($main, 10%);
+    }
+
+    &:focus {
+      outline: none !important;
+    }
+
+    .delete-nav-action {
+      position: absolute;
+      top: 2px;
+      left: 4px;
+    }
+  }
+
+  .more-options {
+    @include full-width();
+    .more-options-content {
+      max-height: 0;
+      border:1px solid #ddd;
+      padding: 5px;
+      border-radius: 4px;
+      @include transition(max-height 500ms);
+      overflow: hidden;
+
+      &.visible {
+        max-height: 2000px;
+      }
+    }
+
+    .more-options-header {
+      position: relative;
+      padding-left: 25px;
+      font-family: 'ClearSans';
+
+      i {
+        position: absolute;
+        top: -2px;
+        left: 0;
+      }
+    }
+  }
+}

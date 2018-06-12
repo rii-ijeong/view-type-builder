@@ -47,6 +47,10 @@
     clear: none;
   }
 
+  .whitespace { 
+    padding: 5px;
+  }
+
   &:not(.input-checkbox){
     label {
       width: 100%;
@@ -61,6 +65,12 @@
 
   &.input-checkbox {
     width: auto;
+
+    &.half {
+      width: 50%;
+      margin-right: 0;
+    }
+
     float: left;
     clear: none;
     margin-right: 30px;
